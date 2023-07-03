@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="30.0" prefWidth="165.0" style="-fx-background-color: #fefefe; -fx-background-radius: 7; -fx-border-radius: 7" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.TaskTemplate">
+   <children>
+      <TextField fx:id="title" layoutX="38.0" layoutY="3.0" onAction="#rename" prefHeight="25.0" prefWidth="103.0" />
+      <ImageView fx:id="cross" fitHeight="12.0" fitWidth="12.0" layoutX="147.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@/client.images/delete-task.png" />
+      </ImageView>
+      <CheckBox fx:id="isCompleted" layoutX="15.0" layoutY="6.0" mnemonicParsing="false" onAction="#invertStatus" />
+      <ImageView fitHeight="10.0" fitWidth="10.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" fx:id="upButton">
+         <Image url="@/client.images/up.png"></Image>
+      </ImageView>
+      <ImageView fitHeight="10.0" fitWidth="10.0" layoutX="3.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" fx:id="downButton">
+         <Image url="@/client.images/down.png"></Image>
+      </ImageView>
+   </children>
+</AnchorPane>

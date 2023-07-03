@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.image.Image?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ConnectToServerViewCtrl">
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/client.images/logo.png"></Image>
+                </ImageView>
+                <Text layoutX="183.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your username here:" />
+                <TextField fx:id="username" layoutX="210.0" layoutY="175.0" maxWidth="200.0" style="-fx-background-radius: 7"/>
+            <Label text="Please enter server password here (admin only):" />
+            <TextField fx:id="password" maxWidth="200.0" style="-fx-background-radius: 7"/>
+            <Label fx:id="errorMessage" prefHeight="18.0" prefWidth="198.0" textFill="red"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your server address here:" />
+                <TextField fx:id="serverAddress" maxWidth="200.0" style="-fx-background-radius: 7"/>
+                <Button mnemonicParsing="false" onAction="#connect" text="Connect" style="-fx-background-radius: 7"/>
+            <Button mnemonicParsing="false" onAction="#connectAsAdmin" text="Connect As Admin" style="-fx-background-radius: 7"/>
+                <Button mnemonicParsing="false" onAction="#useDefaultAddress" text="Use Default" style="-fx-background-radius: 7"/>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
